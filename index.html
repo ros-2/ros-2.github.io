@@ -1149,12 +1149,12 @@
                     // Show sent state
                     submitBtn.textContent = 'Sent!';
 
-                    // Reset form after 3 seconds
+                    // Reset form after 10 seconds
                     setTimeout(() => {
                         form.reset();
                         submitBtn.textContent = originalText;
                         submitBtn.disabled = false;
-                    }, 3000);
+                    }, 10000);
                 } else {
                     throw new Error('Form submission failed');
                 }
