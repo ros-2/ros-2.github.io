@@ -686,42 +686,49 @@
             height: 18px;
         }
 
-        .email-reveal {
-            display: none;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            margin-top: 32px;
-            padding: 20px 28px;
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--text);
             background: var(--bg);
             border: 1px solid var(--border);
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
 
-        .email-reveal.visible {
-            display: inline-flex;
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-light);
         }
 
-        .email-address {
-            font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
-            font-size: 1rem;
-            user-select: all;
-            color: var(--text);
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
         }
 
-        .copy-btn {
-            padding: 10px 16px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            background: var(--accent-light);
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-            color: var(--accent);
-            transition: background 0.2s;
-        }
-
-        .copy-btn:hover {
-            background: var(--border);
+        .form-submit {
+            text-align: center;
         }
 
         /* Footer */
@@ -835,19 +842,8 @@
                 justify-content: flex-start;
             }
             
-            .contact-options {
-                flex-direction: column;
-                gap: 12px;
-            }
-
             .btn {
                 justify-content: center;
-                width: 100%;
-            }
-
-            .email-reveal {
-                flex-direction: column;
-                gap: 12px;
                 width: 100%;
             }
         }
@@ -1097,6 +1093,22 @@
             <p class="section-label">Contact</p>
             <h2>Interested in working together?</h2>
             <p class="subtitle">I work with organisations across the UK. If you have processes that feel like they should be simpler, let's talk.</p>
+
+            <form class="contact-form" action="https://formspree.io/f/mjknoeqd" method="POST">
+                <div class="form-group">
+                    <label for="email">Your email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell me about the processes you'd like to automate..." required></textarea>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                </div>
+            </form>
         </div>
     </section>
 
