@@ -313,27 +313,61 @@
             line-height: 1;
             letter-spacing: -0.01em;
         }
-        
+
         .nav-logo {
             width: 56px;
             height: 56px;
             display: block;
         }
 
-        .nav-links {
+        .nav-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
             display: flex;
-            gap: 36px;
+            flex-direction: column;
+            gap: 5px;
+            z-index: 101;
         }
 
-        .nav-links a {
+        .hamburger-line {
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            transition: all 0.3s;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100vh;
+            background: var(--bg);
+            border-left: 1px solid var(--border);
+            padding: 100px 32px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            transition: right 0.3s;
+        }
+
+        .nav-open .nav-menu {
+            right: 0;
+        }
+
+        .nav-menu a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 1.1rem;
             font-weight: 500;
             transition: color 0.2s;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
         }
 
-        .nav-links a:hover {
+        .nav-menu a:hover {
             color: var(--accent);
         }
 
@@ -1117,12 +1151,18 @@
 </head>
 <body>
     <nav>
-        <a href="#top" class="nav-name">
+        <a href="/" class="nav-name">
             <img src="/android-chrome-512x512.png" alt="Lochross logo" class="nav-logo" width="56" height="56" loading="eager" fetchpriority="high">
             Lochross
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('nav-open')">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <div class="nav-menu">
             <a href="/projects.html">Projects</a>
+            <a href="/case-studies.html">Case Studies</a>
             <a href="/about.html">About</a>
             <a href="/process.html">Process</a>
             <a href="/contact.html">Contact</a>
