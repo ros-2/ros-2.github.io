@@ -23,62 +23,25 @@
 </head>
 <body>
     <nav>
-        <a href="/index.html" class="nav-name">
-            <img src="/android-chrome-512x512.png" alt="Lochross logo" class="nav-logo">
+        <a href="/" class="nav-name">
+            <img src="/android-chrome-512x512.png" alt="Lochross logo" class="nav-logo" width="56" height="56">
             Lochross
         </a>
-        <div class="nav-desktop">
-            <div class="nav-dropdown">
-                <button class="nav-link">Work <span class="dropdown-icon">▾</span></button>
-                <div class="dropdown-menu">
-                    <a href="/projects.html">Projects</a>
-                    <a href="/testimonials.html">Testimonials</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <button class="nav-link">Services <span class="dropdown-icon">▾</span></button>
-                <div class="dropdown-menu">
-                    <a href="/services.html" class="active">Services & Pricing</a>
-                    <a href="/process.html">Process</a>
-                    <a href="/faq.html">FAQ</a>
-                </div>
-            </div>
-            <div class="nav-dropdown">
-                <button class="nav-link">About <span class="dropdown-icon">▾</span></button>
-                <div class="dropdown-menu">
-                    <a href="/about.html">About</a>
-                    <a href="/contact.html">Contact</a>
-                    <a href="https://pmros.substack.com" target="_blank">Blog</a>
-                </div>
-            </div>
-        </div>
-        <button class="nav-mobile-toggle" aria-label="Toggle menu">
+        <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('nav-open')">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
         </button>
-        <div class="nav-mobile-menu">
-            <div class="mobile-section">
-                <h4>Work</h4>
-                <a href="/projects.html">Projects</a>
-                <a href="/testimonials.html">Testimonials</a>
-            </div>
-            <div class="mobile-section">
-                <h4>Services</h4>
-                <a href="/services.html" class="active">Services & Pricing</a>
-                <a href="/process.html">Process</a>
-                <a href="/faq.html">FAQ</a>
-            </div>
-            <div class="mobile-section">
-                <h4>About</h4>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-                <a href="https://pmros.substack.com" target="_blank">Blog</a>
-            </div>
+        <div class="nav-menu">
+            <a href="/projects.html">Projects</a>
+            <a href="/case-studies.html">Case Studies</a>
+            <a href="/about.html">About</a>
+            <a href="/process.html">Services & Process</a>
+            <a href="/contact.html">Contact</a>
         </div>
     </nav>
 
-    <section style="margin-top: 140px;">
+    <section id="top" style="margin-top: 140px;">
         <div class="section-header">
             <p class="section-label">What I Offer</p>
             <h2>Services</h2>
@@ -162,31 +125,8 @@
     </section>
 
     <footer>
-        <div class="footer-nav">
-            <div class="footer-column">
-                <h4>Work</h4>
-                <a href="/projects.html">Projects</a>
-                <a href="/testimonials.html">Testimonials</a>
-            </div>
-            <div class="footer-column">
-                <h4>Services</h4>
-                <a href="/services.html">Services & Pricing</a>
-                <a href="/process.html">Process</a>
-                <a href="/faq.html">FAQ</a>
-            </div>
-            <div class="footer-column">
-                <h4>About</h4>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-                <a href="https://pmros.substack.com" target="_blank">Blog</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>Lochross · Dundee, Scotland</p>
-            <p class="footer-note">Working days based on 8-hour calculation</p>
-        </div>
+        <p>Lochross · Dundee, Scotland · <a href="#top">Back to top ↑</a></p>
+        <p class="footer-note">Working days based on 8-hour calculation</p>
     </footer>
-
-    <script src="/navigation.js"></script>
 </body>
 </html>
