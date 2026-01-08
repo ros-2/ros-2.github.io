@@ -250,8 +250,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
     <style>
         * {
             margin: 0;
@@ -260,14 +260,15 @@
         }
 
         :root {
-            --text: #111;
+            --text: #1A1A1A;
             --text-secondary: #333;
             --text-muted: #666;
-            --bg: #fefefe;
-            --bg-alt: #f4f4f2;
-            --accent: #1e3a2f;
-            --accent-mid: #2d5a45;
-            --accent-light: #e6ede9;
+            --bg: #FFFFFF;
+            --bg-alt: #F4F4F4;
+            --accent: #001F54;
+            --accent-mid: #003580;
+            --accent-light: #E6EBF5;
+            --accent-orange: #FF6F00;
             --border: #e2e2e0;
         }
 
@@ -276,11 +277,12 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Open Sans', -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.65;
             font-size: 16px;
+            font-weight: 400;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -290,10 +292,8 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(254,254,254,0.9);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
+            background: var(--accent);
+            border-bottom: 1px solid var(--accent-mid);
             z-index: 100;
             padding: 24px 48px;
             display: flex;
@@ -305,9 +305,9 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            font-family: 'Instrument Serif', Georgia, serif;
-            font-weight: 400;
-            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: white;
             text-decoration: none;
             font-size: 56px;
             line-height: 1;
@@ -334,7 +334,7 @@
         .hamburger-line {
             width: 24px;
             height: 2px;
-            background: var(--text);
+            background: white;
             transition: all 0.3s;
         }
 
@@ -400,12 +400,13 @@
         }
 
         h1 {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 3.2rem;
-            font-weight: 400;
+            font-weight: 800;
             line-height: 1.12;
             margin-bottom: 24px;
             letter-spacing: -0.02em;
+            color: var(--accent);
         }
 
         .hero-text {
@@ -457,8 +458,9 @@
         }
 
         .impact-number {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 8rem;
+            font-weight: 800;
             line-height: 1;
             letter-spacing: -0.03em;
         }
@@ -489,10 +491,11 @@
         }
 
         h2 {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
-            font-weight: 400;
+            font-weight: 700;
             letter-spacing: -0.01em;
+            color: var(--accent);
         }
 
         .section-count {
@@ -608,14 +611,15 @@
         }
 
         .project-title h3 {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
-            font-weight: 400;
+            font-weight: 700;
             letter-spacing: -0.01em;
             margin: 0;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            color: var(--accent);
         }
 
         .project-detail {
@@ -703,12 +707,12 @@
         }
 
         .btn-primary {
-            background: var(--accent);
+            background: var(--accent-orange);
             color: white;
         }
 
         .btn-primary:hover {
-            background: var(--accent-mid);
+            background: #E66300;
         }
 
         .btn-secondary {
@@ -801,10 +805,10 @@
         footer {
             text-align: center;
             padding: 48px;
-            color: var(--text-muted);
+            color: white;
             font-size: 0.8rem;
-            background: var(--bg);
-            border-top: 1px solid var(--border);
+            background: var(--accent);
+            border-top: 1px solid var(--accent-mid);
         }
 
         /* About Section */
@@ -856,11 +860,11 @@
         }
 
         .pricing-info h3 {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
-            font-weight: 400;
+            font-weight: 700;
             margin-bottom: 20px;
-            color: var(--text);
+            color: var(--accent);
         }
 
         .pricing-info p {
@@ -904,11 +908,12 @@
         }
 
         .cta-banner h3 {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 2rem;
-            font-weight: 400;
+            font-weight: 700;
             margin-bottom: 16px;
             letter-spacing: -0.01em;
+            color: white;
         }
 
         .cta-banner p {
@@ -957,11 +962,11 @@
         }
 
         .benefit-card h3 {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
-            font-weight: 400;
+            font-weight: 700;
             margin-bottom: 12px;
-            color: var(--text);
+            color: var(--accent);
         }
 
         .benefit-card p {
@@ -971,11 +976,11 @@
         }
 
         .testimonials h3 {
-            font-family: 'Instrument Serif', Georgia, serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
-            font-weight: 400;
+            font-weight: 700;
             margin-bottom: 32px;
-            color: var(--text);
+            color: var(--accent);
         }
 
         .testimonial {
@@ -1000,12 +1005,12 @@
         }
 
         footer a {
-            color: var(--text-muted);
+            color: rgba(255,255,255,0.8);
             text-decoration: none;
         }
 
         footer a:hover {
-            color: var(--accent);
+            color: var(--accent-orange);
         }
 
         footer .footer-note {
@@ -1172,7 +1177,7 @@
         <div class="hero-content">
             <span class="hero-label">Automation Consulting</span>
             <h1>I find the work you shouldn't be doing. Then I automate it.</h1>
-            <p class="hero-text">Repetitive and manual tasks burn hours a week. Save money or time through automation.</p>
+            <p class="hero-text">Repetitive and manual tasks burn hours a week. Save time and money through automation.</p>
             <p class="hero-credentials">Based in Scotland</p>
         </div>
         
@@ -1192,21 +1197,21 @@
 
     <section style="padding: 80px 48px; max-width: 1200px; margin: 0 auto;">
         <div style="text-align: center; margin-bottom: 60px;">
-            <h2 style="font-family: 'Instrument Serif', Georgia, serif; font-size: 2.2rem; margin-bottom: 16px;">Proven Results</h2>
+            <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 16px; color: var(--accent);">Proven Results</h2>
             <p style="color: var(--text-secondary); font-size: 1.1rem;">62 working days saved annually across 7 completed projects</p>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-bottom: 60px;">
             <div style="text-align: center; padding: 32px; border: 1px solid var(--border);">
-                <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 3rem; color: var(--accent); margin-bottom: 8px;">14×</div>
+                <div style="font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 800; color: var(--accent); margin-bottom: 8px;">14×</div>
                 <p style="color: var(--text-secondary);">ROI on every hour invested</p>
             </div>
             <div style="text-align: center; padding: 32px; border: 1px solid var(--border);">
-                <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 3rem; color: var(--accent); margin-bottom: 8px;">62</div>
+                <div style="font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 800; color: var(--accent); margin-bottom: 8px;">62</div>
                 <p style="color: var(--text-secondary);">Working days saved per year</p>
             </div>
             <div style="text-align: center; padding: 32px; border: 1px solid var(--border);">
-                <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 3rem; color: var(--accent); margin-bottom: 8px;">7</div>
+                <div style="font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 800; color: var(--accent); margin-bottom: 8px;">7</div>
                 <p style="color: var(--text-secondary);">Projects completed</p>
             </div>
         </div>
@@ -1219,8 +1224,7 @@
 
     <section style="background: var(--bg-alt); padding: 80px 48px;">
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2 style="font-family: 'Instrument Serif', Georgia, serif; font-size: 2.2rem; margin-bottom: 24px;">Ready to start saving time?</h2>
-            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 32px;">Book a free 30-minute discovery call. No obligation, no pressure. Just an honest conversation about where automation could help your team.</p>
+            <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 24px; color: var(--accent);">Ready to start saving time?</h2>
             <a href="/contact.html" class="btn btn-primary">Book Your Free Discovery Call</a>
         </div>
     </section>
