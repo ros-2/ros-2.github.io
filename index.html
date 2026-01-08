@@ -245,8 +245,6 @@
         ]
     }
     </script>
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/android-chrome-512x512.png" as="image">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -304,7 +302,6 @@
         .nav-name {
             display: flex;
             align-items: center;
-            gap: 14px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             color: white;
@@ -312,12 +309,6 @@
             font-size: 56px;
             line-height: 1;
             letter-spacing: -0.01em;
-        }
-
-        .nav-logo {
-            width: 56px;
-            height: 56px;
-            display: block;
         }
 
         .nav-toggle {
@@ -1092,11 +1083,6 @@
             .nav-name {
                 font-size: 44px;
             }
-            
-            .nav-logo {
-                width: 44px;
-                height: 44px;
-            }
 
             .nav-links {
                 gap: 24px;
@@ -1155,7 +1141,6 @@
 <body>
     <nav>
         <a href="/" class="nav-name">
-            <img src="/android-chrome-512x512.png" alt="Lochross logo" class="nav-logo" width="56" height="56" loading="eager" fetchpriority="high">
             Lochross
         </a>
         <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('nav-open')">

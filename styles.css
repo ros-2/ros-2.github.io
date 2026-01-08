@@ -56,7 +56,6 @@ nav {
 .nav-name {
     display: flex;
     align-items: center;
-    gap: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     color: white;
@@ -64,12 +63,6 @@ nav {
     font-size: 56px;
     line-height: 1;
     letter-spacing: -0.01em;
-}
-
-.nav-logo {
-    width: 56px;
-    height: 56px;
-    display: block;
 }
 
 /* Hamburger Menu */
@@ -881,11 +874,6 @@ footer .footer-note {
         font-size: 44px;
     }
 
-    .nav-logo {
-        width: 44px;
-        height: 44px;
-    }
-
     .nav-desktop {
         display: none;
     }
@@ -993,11 +981,6 @@ footer .footer-note {
     /* Navigation */
     .nav-name {
         font-size: 32px;
-    }
-
-    .nav-logo {
-        width: 32px;
-        height: 32px;
     }
 
     /* Hero text adjustments */
